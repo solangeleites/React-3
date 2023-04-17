@@ -1,13 +1,14 @@
 import GlobalStyle from './styles/GlobalStyle';
-import Todo from './components/Todo/Todo';
-import { TodoProvider } from './components/context/context';
+import Router from './routes/Router';
+import { Provider } from 'react-redux';
+import store from './store';
+
 function App() {
   return (
     <>
-    <TodoProvider>
-    <Todo>
-    </Todo>
-    </TodoProvider>
+      <Provider store={store}>  
+      <Router />
+       </Provider> 
       <GlobalStyle />
     </>
   );
